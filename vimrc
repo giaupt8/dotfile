@@ -1,7 +1,7 @@
 "vim-bootstrap
 
 let g:vim_bootstrap_langs = "c,html,javascript,perl,php,python,ruby,typescript"
-let g:vim_bootstrap_editor = ""				" nvim or vim
+let g:vim_bootstrap_editor = "vim"				" nvim or vim
 
 "*****************************************************************************
 "" Basic Setup
@@ -160,7 +160,7 @@ let g:NERDTreeSortOrder=['^__\.py$', '\/$', '*', '\.swp$', '\.bak$', '\~$']
 let g:NERDTreeShowBookmarks=1
 let g:nerdtree_tabs_focus_on_files=1
 let g:NERDTreeMapOpenInTabSilent = '<RightMouse>'
-let g:NERDTreeWinSize = 40
+let g:NERDTreeWinSize = 30
 let g:NERDTreeWinPos = "right"
 let NERDTreeShowHidden=1
 let NERDTreeAutoDeleteBuffer = 1
@@ -367,7 +367,6 @@ nnoremap td  :tabclose<CR>
 nnoremap nt  :tabnew<CR>
 set dictionary+=~/.vim/pack/plugins/start/b4snippet/dictionary
 set complete+=k
-
 "Nerdcomment
 "Add spaces after comment delimiters by default
 let g:NERDSpaceDelims = 1
@@ -432,11 +431,11 @@ vnoremap K :m '<-2<CR>gv=gv
 nnoremap <Leader>o :.Gbrowse<CR>
 
 " snippets
-let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsExpandTrigger="jp"
 let g:UltiSnipsJumpForwardTrigger="<tab>"
 let g:UltiSnipsJumpBackwardTrigger="<c-b>"
 let g:UltiSnipsEditSplit="vertical"
-let g:snips_trigger_key = "<tab>"
+let g:snips_trigger_key = "jp"
 
 
 " Use compact syntax for prettified multi-line comments
@@ -590,9 +589,9 @@ endif
 if !exists('g:airline_powerline_fonts')
   let g:airline#extensions#tabline#left_sep = ' '
   let g:airline#extensions#tabline#left_alt_sep = '|'
-  let g:airline_left_sep          = '▶'
+""  let g:airline_left_sep          = '▶'
   let g:airline_left_alt_sep      = '»'
-  let g:airline_right_sep         = '◀'
+"" let g:airline_right_sep         = '◀'
   let g:airline_right_alt_sep     = '«'
   let g:airline#extensions#branch#prefix     = '⤴' "➔, ➥, ⎇
   let g:airline#extensions#readonly#symbol   = '⊘'
@@ -635,7 +634,7 @@ nnoremap <silent> <Leader>- :exe "resize " . (winheight(0) * 2/3)<CR>
 
 let g:gruvbox_termcolors=256
 "let g:gruvbox_contrast='soft'
-let g:gruvbox_contrast_dark='soft'
+let g:gruvbox_contrast_dark='hard'
 let g:gruvbox_hls_cursor='bg0_s'
 
 " air-line
